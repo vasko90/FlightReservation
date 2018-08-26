@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Flights</title>
+<link href="css/mainPage.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="content">
+<h3>Find flight</h3>
+<form action="findFlights" method="post">
+
+From:<select name="departureCity">
+        <option value=""> -- </option>
+        <option th:each="city : ${session.departure}"
+         th:value="${city}"
+         th:utext="${city}"/>
+     </select><br>
+
+<!--  <input type="text" name="departureCity"><br> -->
+
+To:<select name="arrivalCity">
+        <option value=""> -- </option>
+        <option th:each="city : ${session.arrival}"
+         th:value="${city}"
+         th:utext="${city}"/>
+     </select><br>
+
+<!--  <input type="text" name="arrivalCity"><br> -->
+
+
+Date: <input type="text" name="date"> (format DD-MM-YYYY)<br>
+
+<input type="submit" value="Find">
+</form>
+</div>
+<br><br>
+<div th:if="${flights}">
+<div class="table">
+<h3>Flights:</h3>
+<table>
+<tr>
+<th>Flight number</th>
+<th>Airlines</th>
+<th>Departure city</th>
+<th>Arrival city</th>
+<th>Departure date</th>
+<th></th>
+</tr>
+<tr th:each="flight : ${flights}">
+<td th:text="${flight.flight_number}"></td>
+<td th:text="${flight.operating_airlines}"></td>
+<td th:text="${flight.departure_city}"></td>
+<td th:text="${flight.arrival_city}"></td>
+<td th:text="${flight.departure_date}"></td>
+<td><a th:href="@{createReservation(id=${flight.id})}">Select</a></td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>

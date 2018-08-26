@@ -1,0 +1,10 @@
+body{
+		padding:0;
+		margin:0;
+}
+div{
+	background-color: white;
+	color: black;
+	width: 600px;
+	margin: auto;
+}

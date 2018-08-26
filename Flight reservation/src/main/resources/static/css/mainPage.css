@@ -1,0 +1,36 @@
+body{
+		padding:0;
+		margin:0;
+		background-image: url(../pictures/flight3.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;		
+}
+.content{
+		color: white;
+		font-size: 20px;	
+		margin:10px;
+}
+input{
+		margin-bottom: 5px;	
+}
+.table{
+		color: white;
+		margin: 10px;	
+}
+th{
+	background-color: black;		
+}
+td{
+	background-color: white;
+	color: black;		
+}
+th, tr, td{
+	padding:3px;
+}
+table{
+	margin-left:0;
+	border: 1px solid white;
+}	
+	
+	
+	
