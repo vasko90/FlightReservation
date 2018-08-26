@@ -1,1 +1,1 @@
-Flight reservation je Java aplikacija radjena pomocu Spring Boot-a, koja simulira rezervaciju avionskih karata. Unutra sebe sadrzi REST servis za cekiranje karata. Cekiranje se vrsi pomocu Reservation checkin aplikacije, koja je takodje odradjena pomocu Spring Boot-a.
+Flight reservation je Java aplikacija radjena pomocu Spring Boot-a u Maven-u, koja simulira rezervaciju avionskih karata. Unutra sebe sadrzi REST servis za cekiranje karata. Cekiranje se vrsi pomocu Reservation checkin aplikacije, koja je takodje odradjena pomocu Spring Boot-a.
